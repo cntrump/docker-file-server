@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk update && \
-    apk add --no-cache nginx nginx-mod-http-fancyindex && \
+    apk add --no-cache nginx nginx-mod-http-fancyindex tzdata && \
     rm -rf /var/cache/apk/*
 
 ADD nginx.conf /etc/nginx/nginx.conf

@@ -7,7 +7,23 @@ Nginx file server base on docker
 
 ```zsh
 docker pull cntrump/file-server
-docker run --rm -p 80:80 -p 443:443 -v ${PWD}:/data cntrump/file-server
+```
+
+```zsh
+docker run --rm \
+    -p 80:80 -p 443:443 \
+    -v ${PWD}:/data \
+    cntrump/file-server
+```
+
+local time zone:
+
+```zsh
+docker run --rm \
+    -e TZ="Asia/Shanghai \
+    -p 80:80 -p 443:443 \
+    -v ${PWD}:/data \
+    cntrump/file-server"
 ```
 
 visit: http://localhost/share
