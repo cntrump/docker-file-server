@@ -20,10 +20,10 @@ local time zone:
 
 ```zsh
 docker run --rm \
-    -e TZ="Asia/Shanghai \
+    -e TZ="Asia/Shanghai" \
     -p 80:80 -p 443:443 \
     -v ${PWD}:/data \
-    cntrump/file-server"
+    cntrump/file-server
 ```
 
 visit: http://localhost/share
